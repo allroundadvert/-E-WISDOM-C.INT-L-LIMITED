@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E WISDOM C.INT'L LIMITED</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff8e1;
+    color: #333;
+  }
+
+  header img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .intro {
+    text-align: center;
+    padding: 20px;
+    background: #ffd700;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .gallery img {
+    width: calc(50% - 10px);
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .slide-left-right {
+    animation: slideLR 3s infinite alternate;
+  }
+
+  @keyframes slideLR {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(15px); }
+    100% { transform: translateX(0); }
+  }
+
+  .form-section {
+    background: #fff8e1;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    border: 2px solid #ffd700;
+  }
+
+  .form-section h2 {
+    text-align: center;
+    color: #b8860b;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  input, textarea, button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .products label {
+    width: calc(50% - 10px);
+    background: #fff5d1;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ffd700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .products input {
+    margin-right: 5px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #b8860b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .buttons a.whatsapp {
+    background: #25D366;
+  }
+
+  .buttons a.call {
+    background: #007bff;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .address {
+    background: #fff8e1;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 8px;
+    border: 2px solid #ffd700;
+    text-align: center;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://raw.githubusercontent.com/allroundadvert/INNOSON-ELECTRONICS-PLAZA-/9558d6a63c2211be846921bec0007115ad92c8d0/.github/workflows/1773740154904.png" alt="E Wisdom Electronics">
+</header>
+
+<div class="intro">
+  E WISDOM C.INT'L LIMITED <br>
+  Known for high quality electronics of different categories
+</div>
+
+<!-- GALLERY REMAINS SAME -->
+<section class="gallery">
+  <img src="https://raw.githubusercontent.com/allroundadvert/INNOSON-ELECTRONICS-PLAZA-/a3eb0c6712b89c92cbb25698ea275b021d6daed6/download%20(1).webp" class="slide-left-right">
+  <img src="https://raw.githubusercontent.com/allroundadvert/INNOSON-ELECTRONICS-PLAZA-/a3eb0c6712b89c92cbb25698ea275b021d6daed6/download%20(10).webp" class="slide-left-right">
+</section>
+
+<section class="form-section">
+  <h2>Place Your Order</h2>
+  <form id="orderForm">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" id="name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Phone:</label>
+      <input type="tel" id="phone" required>
+    </div>
+
+    <div class="buttons">
+      <a href="https://wa.me/234834001482" target="_blank" class="whatsapp">WhatsApp</a>
+      <a href="tel:08032062503" class="call">Call Now</a>
+    </div>
+
+    <button type="button" onclick="submitOrder()" style="margin-top:15px;background:#b8860b;color:white;">Submit Order</button>
+  </form>
+</section>
+
+<section class="address">
+  Head Office: 54 Mission Road, Benin City, Edo State <br>
+  Branch: Number 8 Ogieva Street opposite Holy Cross Catholic Church
+</section>
+
+<section class="map">
+  <iframe src="https://www.google.com/maps?q=54+Mission+Road+Benin+City+Edo+State&output=embed"></iframe>
+</section>
+
+<script>
+function submitOrder() {
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+
+  if(!name || !phone) {
+    alert("Please fill all fields.");
+    return;
+  }
+
+  let message = `Hello, my name is ${name}. My phone number is ${phone}. I want to make an inquiry.`;
+  window.open(`https://wa.me/234834001482?text=${encodeURIComponent(message)}`, '_blank');
+}
+</script>
+
+</body>
+</html>
